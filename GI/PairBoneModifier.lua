@@ -1,3 +1,26 @@
+-- ===============================================================
+-- VARIABLES
+-- ===============================================================
+
+local BONE_NAME_L = "+Breast L A01"    -- Left
+local BONE_NAME_R = "+Breast R A01"    -- Right
+
+local CONTAINER_NAME = "Breast_Scaler" -- Container Name, Change if u applying new modifications on same char
+
+-- Basic Math
+-- 2.0 Double - Twice Actual Size
+-- 1.5 Half - 50% Bigger
+-- 1.0 Default - No Changes
+-- 0.5 Half - 50% Smaller
+
+local NEW_SCALE_X = 1.2
+local NEW_SCALE_Y = 1.2
+local NEW_SCALE_Z = 1.2
+
+-- ===============================================================
+-- SCRIPT
+-- ===============================================================
+
 local function find_active_char()
     local avatar_root = CS.UnityEngine.GameObject.Find("/EntityRoot/AvatarRoot")
     if not avatar_root then return nil end
