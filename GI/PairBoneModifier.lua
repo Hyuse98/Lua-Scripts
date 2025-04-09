@@ -117,3 +117,9 @@ local function modify_paired_bones()
         CS.MoleMole.ActorUtils.ShowMessage("Scaling sucessfuly on '" .. CONTAINER_NAME .. "'.")
     end
 end
+
+local function onError(error)
+    CS.MoleMole.ActorUtils.ShowMessage("ERRO: Unexpected Error\n" .. tostring(error))
+end
+
+xpcall(modify_paired_bones, onError)
